@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung Bestätigung</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header mit globaler Navigation -->
+    <header class="bg-primary-light text-white text-center py-2">
+        <div class="container">
+            <img src="images/kleiderspende.png" alt="Vereinslogo" class="logo mx-auto d-block">
+            <h1>Registrierung Bestätigung</h1>
+            <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="kleiderspende.html">Kleiderspenden</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">Über Uns</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content-Bereich -->
+    <main class="container my-5">
+        <h2>Registrierung erfolgreich!</h2>
+        <p>Ihre Kleiderspende wurde erfolgreich registriert. Hier sind die Details Ihrer Registrierung:</p>
+        <ul>
+            <li><strong>Art der Kleider:</strong> <span id="clothingType"></span></li>
+            <li><strong>Krisengebiet:</strong> <span id="crisisArea"></span></li>
+            <li><strong>Ort:</strong> <span id="location"></span></li>
+            <li><strong>Öffnungszeiten:</strong> <span id="openingHours"></span></li>
+        </ul>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+    </main>
+
+    <!-- Footer mit rechtlichen Hinweisen -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Verein für Kleiderspenden. Alle Rechte vorbehalten.</p>
+            <p><a href="#" class="text-white">Impressum</a> | <a href="#" class="text-white">Datenschutz</a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="bestaetigung.js"></script>
+</body>
+</html>

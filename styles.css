@@ -2,6 +2,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+header.bg-primary-light {
+    background-color: #4a90e2; /* Weniger dunkles Blau */
+}
+
 header .logo {
     max-width: 100px;
     margin-bottom: 10px;
@@ -9,6 +13,11 @@ header .logo {
 
 header h1 {
     margin: 0;
+    font-size: 1.5rem; /* Kleinere Schriftgröße für den Header */
+}
+
+nav.navbar {
+    justify-content: center; /* Navigation zentriert */
 }
 
 main {

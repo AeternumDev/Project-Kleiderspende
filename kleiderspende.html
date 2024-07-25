@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kleiderspenden-Registrierung</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header mit globaler Navigation -->
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <img src="logo.png" alt="Vereinslogo" class="logo">
+            <h1>Kleiderspenden-Registrierung</h1>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="kleiderspenden.html">Kleiderspenden</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">Über Uns</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content-Bereich -->
+    <main class="container my-5">
+        <h2>Registrieren Sie Ihre Kleiderspende</h2>
+        <form id="donationForm">
+            <div class="form-group">
+                <label for="donationType">Art der Kleiderspende</label>
+                <select class="form-control" id="donationType" name="donationType" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="Abholung">Abholung</option>
+                    <option value="Übergabe an der Geschäftsstelle">Übergabe an der Geschäftsstelle</option>
+                </select>
+            </div>
+            <div class="form-group" id="addressGroup" style="display:none;">
+                <label for="address">Abholadresse</label>
+                <input type="text" class="form-control" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="clothingType">Art der Kleidung</label>
+                <input type="text" class="form-control" id="clothingType" name="clothingType" required>
+            </div>
+            <div class="form-group">
+                <label for="crisisArea">Krisengebiet</label>
+                <select class="form-control" id="crisisArea" name="crisisArea" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="Gebiet1">Gebiet1</option>
+                    <option value="Gebiet2">Gebiet2</option>
+                    <option value="Gebiet3">Gebiet3</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrieren</button>
+        </form>
+    </main>
+
+    <!-- Footer mit rechtlichen Hinweisen -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Verein für Kleiderspenden. Alle Rechte vorbehalten.</p>
+            <p><a href="#" class="text-white">Impressum</a> | <a href="#" class="text-white">Datenschutz</a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    

@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header .logo {
+    max-width: 100px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #343a40;
+}
+
+footer p {
+    margin: 0;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}

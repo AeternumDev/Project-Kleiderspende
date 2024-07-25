@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verein für Kleiderspenden</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header mit globaler Navigation -->
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <img src="logo.png" alt="Vereinslogo" class="logo">
+            <h1>Verein für Kleiderspenden</h1>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="kleiderspenden.html">Kleiderspenden</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">Über Uns</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero-Bereich -->
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Willkommen beim Verein für Kleiderspenden</h1>
+            <p class="lead text-muted">Gemeinsam helfen wir Menschen in Not durch Ihre Kleiderspenden.</p>
+            <p>
+                <a href="kleiderspenden.html" class="btn btn-primary my-2">Jetzt Spenden</a>
+                <a href="#about" class="btn btn-secondary my-2">Erfahren Sie mehr</a>
+                <!-- Test Button -->
+                <a href="#" class="btn btn-success my-2">Test Bootstrap Button</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Über Uns -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2>Über Uns</h2>
+            <p>Unser Verein hat sich der Aufgabe verschrieben, Kleiderspenden zu sammeln und diese an Menschen in Krisengebieten zu verteilen. Erfahren Sie mehr über unsere Mission und wie Sie uns unterstützen können.</p>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>Haben Sie Fragen oder möchten Sie mehr über unsere Arbeit erfahren? Kontaktieren Sie uns gerne.</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nachricht</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Senden</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer mit rechtlichen Hinweisen -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Verein für Kleiderspenden. Alle Rechte vorbehalten.</p>
+            <p><a href="#" class="text-white">Impressum</a> | <a href="#" class="text-white">Datenschutz</a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

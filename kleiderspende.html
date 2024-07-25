@@ -11,12 +11,12 @@
     <!-- Header mit globaler Navigation -->
     <header class="bg-primary text-white text-center py-3">
         <div class="container">
-            <img src="logo.png" alt="Vereinslogo" class="logo">
+            <img src="images/kleiderspende.png" alt="Vereinslogo" class="logo">
             <h1>Kleiderspenden-Registrierung</h1>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="kleiderspenden.html">Kleiderspenden</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="kleiderspende.html">Kleiderspenden</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#about">Über Uns</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#contact">Kontakt</a></li>
                 </ul>
@@ -36,9 +36,27 @@
                     <option value="Übergabe an der Geschäftsstelle">Übergabe an der Geschäftsstelle</option>
                 </select>
             </div>
-            <div class="form-group" id="addressGroup" style="display:none;">
-                <label for="address">Abholadresse</label>
-                <input type="text" class="form-control" id="address" name="address">
+            <div id="addressGroup" style="display:none;">
+                <div class="form-group">
+                    <label for="street">Straße</label>
+                    <input type="text" class="form-control" id="street" name="street">
+                </div>
+                <div class="form-group">
+                    <label for="houseNumber">Hausnummer</label>
+                    <input type="text" class="form-control" id="houseNumber" name="houseNumber">
+                </div>
+                <div class="form-group">
+                    <label for="zipCode">Postleitzahl</label>
+                    <input type="text" class="form-control" id="zipCode" name="zipCode">
+                </div>
+                <div class="form-group">
+                    <label for="city">Stadt</label>
+                    <input type="text" class="form-control" id="city" name="city">
+                </div>
+                <div class="form-group">
+                    <label for="country">Land</label>
+                    <input type="text" class="form-control" id="country" name="country">
+                </div>
             </div>
             <div class="form-group">
                 <label for="clothingType">Art der Kleidung</label>
@@ -68,4 +86,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+    <script src="kleiderspende.js"></script>
+</body>
+</html>

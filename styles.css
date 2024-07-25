@@ -4,6 +4,7 @@ body {
 
 header .logo {
     max-width: 100px;
+    margin-bottom: 10px;
 }
 
 header h1 {
@@ -26,4 +27,14 @@ footer p {
 
 form .form-group {
     margin-bottom: 15px;
+}
+
+/* Animation für den "Jetzt Spenden" Button */
+.btn-animated {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-animated:hover {
+    background-color: #0056b3; /* Dunkleres Blau */
+    transform: scale(1.1); /* Vergrößern */
 }

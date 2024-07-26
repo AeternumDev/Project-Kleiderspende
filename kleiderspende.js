@@ -1,9 +1,15 @@
 document.getElementById('donationType').addEventListener('change', function() {
     var addressGroup = document.getElementById('addressGroup');
+    var officeAddress = document.getElementById('officeAddress');
     if (this.value === 'Abholung') {
         addressGroup.style.display = 'block';
+        officeAddress.style.display = 'none';
+    } else if (this.value === 'Übergabe an der Geschäftsstelle') {
+        addressGroup.style.display = 'none';
+        officeAddress.style.display = 'block';
     } else {
         addressGroup.style.display = 'none';
+        officeAddress.style.display = 'none';
     }
 });
 
@@ -11,50 +17,39 @@ document.getElementById('donationForm').addEventListener('submit', function(even
     event.preventDefault();
     var form = event.target;
     var donationType = form.donationType.value;
-    var street = form.street.value;
-    var houseNumber = form.houseNumber.value;
-    var zipCode = form.zipCode.value;
-    var city = form.city.value;
-    var country = form.country.value;
+    var firstName = form.firstName ? form.firstName.value : '';
+    var lastName = form.lastName ? form.lastName.value : '';
+    var street = form.street ? form.street.value : '';
+    var houseNumber = form.houseNumber ? form.houseNumber.value : '';
+    var zipCode = form.zipCode ? form.zipCode.value : '';
+    var city = form.city ? form.city.value : '';
+    var country = form.country ? form.country.value : '';
+    var pickupDate = form.pickupDate ? form.pickupDate.value : '';
     var clothingType = form.clothingType.value;
     var crisisArea = form.crisisArea.value;
 
     if (donationType === 'Abholung' && !validateAddress(zipCode)) {
-        alert('Die Abholadresse muss in der Nähe der Geschäftsstelle liegen: Mülheimer Str. 38, 53604 Bad Honnef');
+        alert('Die Abholadresse muss in der Nähe der Geschäftsstelle liegen.');
         return;
     }
 
-    var location = donationType === 'Übergabe an der Geschäftsstelle' 
-        ? 'Geschäftsstelle' 
-        : `${street} ${houseNumber}, ${zipCode} ${city}, ${country}`;
+    var confirmationData = {
+        donationType: donationType,
+        firstName: firstName,
+        lastName: lastName,
+        clothingType: clothingType,
+        crisisArea: crisisArea,
+        date: donationType === 'Abholung' ? pickupDate : new Date().toLocaleDateString('de-DE'),
+        time: donationType === 'Abholung' ? '15:00 - 19:00' : new Date().toLocaleTimeString('de-DE'),
+        location: donationType === 'Übergabe an der Geschäftsstelle' ? 'Geschäftsstelle, Mülheimer Str. 38, 53604 Bad Honnef, Deutschland' : `${street} ${houseNumber}, ${zipCode} ${city}, ${country}`,
+        openingHours: donationType === 'Übergabe an der Geschäftsstelle' ? 'Montag - Freitag: 09:00 - 18:00, Samstag: 10:00 - 14:00, Sonntag: Geschlossen' : null
+    };
 
-    var confirmationUrl = `bestaetigung.html?clothingType=${encodeURIComponent(clothingType)}&crisisArea=${encodeURIComponent(crisisArea)}&date=${encodeURIComponent(new Date().toLocaleDateString())}&time=${encodeURIComponent(new Date().toLocaleTimeString())}&location=${encodeURIComponent(location)}`;
-
-    window.location.href = confirmationUrl;
+    localStorage.setItem('confirmationData', JSON.stringify(confirmationData));
+    window.location.href = 'success.html';
 });
 
 function validateAddress(zipCode) {
-    var officeZip = '53604'; // PLZ der Geschäftsstelle
-    return zipCode.startsWith(officeZip.substring(0, 5));
+    var officeZipStart = '53'; // Die ersten beiden Ziffern der Geschäftsstelle PLZ
+    return zipCode.startsWith(officeZipStart);
 }
-
-function populateCrisisAreas() {
-    var crisisAreas = [
-        "Syrien (Nachfrage: hoch)", "Jemen (Nachfrage: mittel)", "Afghanistan (Nachfrage: hoch)", "Ukraine (Nachfrage: mittel)", 
-        "Sudan (Nachfrage: hoch)", "Demokratische Republik Kongo (Nachfrage: niedrig)", "Venezuela (Nachfrage: mittel)",
-        "Myanmar (Nachfrage: hoch)", "Äthiopien (Nachfrage: niedrig)", "Zentralafrikanische Republik (Nachfrage: hoch)",
-        "Haiti (Nachfrage: mittel)", "Somalia (Nachfrage: hoch)"
-    ];
-
-    crisisAreas = crisisAreas.sort(() => Math.random() - 0.5);
-
-    var crisisAreaSelect = document.getElementById('crisisArea');
-    crisisAreas.forEach(area => {
-        var option = document.createElement('option');
-        option.value = area;
-        option.textContent = area;
-        crisisAreaSelect.appendChild(option);
-    });
-}
-
-document.addEventListener('DOMContentLoaded', populateCrisisAreas);

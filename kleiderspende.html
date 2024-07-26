@@ -8,18 +8,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header mit globaler Navigation -->
-    <header class="bg-primary-light text-white text-center py-2">
+    <!-- Einheitlicher Header mit globaler Navigation -->
+    <header class="bg-dark text-white">
         <div class="container">
-            <img src="images/kleiderspende.png" alt="Vereinslogo" class="logo mx-auto d-block">
-            <h1>Kleiderspenden-Registrierung</h1>
-            <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="kleiderspende.html">Kleiderspenden</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#about">Über Uns</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Kontakt</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/kleiderspende.png" alt="Vereinslogo" class="logo" style="height: 40px;">
+                    Kleiderspenden-Registrierung
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">Über Uns</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Kontakt</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kleiderspende.html">Kleiderspenden</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -37,6 +44,14 @@
                 </select>
             </div>
             <div id="addressGroup" style="display:none;">
+                <div class="form-group">
+                    <label for="firstName">Vorname</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Nachname</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName">
+                </div>
                 <div class="form-group">
                     <label for="street">Straße</label>
                     <input type="text" class="form-control" id="street" name="street">
@@ -57,6 +72,21 @@
                     <label for="country">Land</label>
                     <input type="text" class="form-control" id="country" name="country">
                 </div>
+                <div class="form-group">
+                    <label for="pickupDate">Abholtag</label>
+                    <input type="date" class="form-control" id="pickupDate" name="pickupDate">
+                </div>
+                <p>Die Kleider werden immer zwischen 15-19 Uhr abgeholt. Aufgrund des Ehrenamtes sind keine anderen Uhrzeiten möglich.</p>
+            </div>
+            <div id="officeAddress" style="display:none;">
+                <p><strong>Übergabeort:</strong></p>
+                <p>Mülheimer Str. 38, 53604 Bad Honnef, Deutschland</p>
+                <p><strong>Öffnungszeiten:</strong></p>
+                <ul>
+                    <li>Montag - Freitag: 09:00 - 18:00</li>
+                    <li>Samstag: 10:00 - 14:00</li>
+                    <li>Sonntag: Geschlossen</li>
+                </ul>
             </div>
             <div class="form-group">
                 <label for="clothingType">Art der Kleidung</label>
@@ -66,6 +96,16 @@
                 <label for="crisisArea">Krisengebiet</label>
                 <select class="form-control" id="crisisArea" name="crisisArea" required>
                     <option value="">Bitte wählen</option>
+                    <option value="Algerien (Nachfrage: niedrig)">Algerien (Nachfrage: niedrig)</option>
+                    <option value="Syrien (Nachfrage: hoch)">Syrien (Nachfrage: hoch)</option>
+                    <option value="Jemen (Nachfrage: hoch)">Jemen (Nachfrage: hoch)</option>
+                    <option value="Sudan (Nachfrage: mittel)">Sudan (Nachfrage: mittel)</option>
+                    <option value="Afghanistan (Nachfrage: hoch)">Afghanistan (Nachfrage: hoch)</option>
+                    <option value="Somalia (Nachfrage: mittel)">Somalia (Nachfrage: mittel)</option>
+                    <option value="Nigeria (Nachfrage: mittel)">Nigeria (Nachfrage: mittel)</option>
+                    <option value="Haiti (Nachfrage: niedrig)">Haiti (Nachfrage: niedrig)</option>
+                    <option value="Libyen (Nachfrage: mittel)">Libyen (Nachfrage: mittel)</option>
+                    <option value="Irak (Nachfrage: hoch)">Irak (Nachfrage: hoch)</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Registrieren</button>

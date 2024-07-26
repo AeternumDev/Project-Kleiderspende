@@ -3,15 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrierung Erfolgreich</title>
+    <title>Erfolgreiche Registrierung</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header mit globaler Navigation -->
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <img src="images/kleiderspende.png" alt="Vereinslogo" class="logo">
+            <h1>Erfolgreiche Registrierung</h1>
+        </div>
+    </header>
+
+    <!-- Content-Bereich -->
     <main class="container my-5">
-        <h2>Registrierung Erfolgreich</h2>
-        <p id="confirmation"></p>
+        <h2>Vielen Dank für Ihre Kleiderspende!</h2>
+        <p>Hier sind die Details Ihrer Registrierung:</p>
+        <ul id="confirmationDetails"></ul>
         <a href="index.html" class="btn btn-primary">Zurück zur Startseite</a>
     </main>
+
+    <!-- Footer mit rechtlichen Hinweisen -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Verein für Kleiderspenden. Alle Rechte vorbehalten.</p>
+            <p><a href="#" class="text-white">Impressum</a> | <a href="#" class="text-white">Datenschutz</a></p>
+        </div>
+    </footer>
+
+    <script src="success.js"></script>
 </body>
 </html>

@@ -8,18 +8,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header mit globaler Navigation -->
-    <header class="bg-primary-light text-white text-center py-2">
+    <!-- Einheitlicher Header mit globaler Navigation -->
+    <header class="bg-dark text-white">
         <div class="container">
-            <img src="images/kleiderspende.png" alt="Vereinslogo" class="logo mx-auto d-block">
-            <h1>Verein für Kleiderspenden</h1>
-            <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="kleiderspende.html">Kleiderspenden</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#about">Über Uns</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Kontakt</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/kleiderspende.png" alt="Vereinslogo" class="logo" style="height: 40px;">
+                    Verein für Kleiderspenden
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">Über Uns</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Kontakt</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kleiderspende.html">Kleiderspenden</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -30,7 +37,7 @@
             <h1 class="jumbotron-heading">Willkommen beim Verein für Kleiderspenden</h1>
             <p class="lead text-muted">Gemeinsam helfen wir Menschen in Not durch Ihre Kleiderspenden.</p>
             <p>
-                <a href="kleiderspende.html" class="btn btn-primary btn-lg my-2 btn-animated">Jetzt Spenden</a>
+                <a href="kleiderspende.html" class="btn btn-primary my-2">Jetzt Spenden</a>
             </p>
         </div>
     </section>
@@ -45,14 +52,13 @@
             <div class="row mt-4">
                 <div class="col-md-6">
                     <h3>Unsere Geschichte</h3>
-                    <p>Der Verein wurde im Jahr 2010 gegründet und hat seitdem zahlreiche Hilfsprojekte in verschiedenen Ländern unterstützt. Angefangen als kleine Initiative, sind wir heute ein etablierter Verein mit vielen ehrenamtlichen Helfern und Unterstützern.</p>
+                    <p>Der Verein wurde im Jahr 2010 gegründet und hat seitdem zahlreiche Hilfsprojekte in verschiedenen Ländern unterstützt. Angefangen als kleine Initiative, sind wir heute ein etablierter Verein mit vielen ehrenamtlichen Helfern und Unterstützern. Unser Engagement und unsere Bemühungen haben uns in die Lage versetzt, effektiv und nachhaltig zu helfen.</p>
                 </div>
                 <div class="col-md-6">
                     <img src="images/geschichte.jpg" class="img-fluid" alt="Unsere Geschichte">
                 </div>
             </div>
         
-            
             <!-- Unsere Projekte -->
             <div class="row mt-4">
                 <div class="col-md-12">
@@ -60,20 +66,12 @@
                     <p>Wir sind stolz auf die vielen Projekte, die wir unterstützen. Hier sind einige der aktuellen Projekte:</p>
                 </div>
                 <div class="col-md-6">
-                    <h5>Projekt Hoffnung</h5>
-                    <p>Projekt Hoffnung zielt darauf ab, vertriebene Familien in Kriegsgebieten mit Kleidung, Decken und lebensnotwendigen Artikeln zu versorgen. Unser Team vor Ort arbeitet eng mit lokalen Organisationen zusammen, um sicherzustellen, dass die Spenden die Bedürftigsten erreichen.</p>
+                    <h5>Projekt Humanitas in Panno</h5>
+                    <p>Dieses Projekt zielt darauf ab, Menschen in Krisengebieten mit dringend benötigter Kleidung zu versorgen.</p>
                 </div>
                 <div class="col-md-6">
-                    <h5>Projekt Wärme</h5>
-                    <p>Im Rahmen des Projekts Wärme sammeln wir Winterkleidung und Heizmaterialien für obdachlose Menschen in kalten Regionen. Dieses Projekt hilft, die Auswirkungen der Wintermonate zu mildern und die Gesundheit und das Wohlbefinden der betroffenen Menschen zu verbessern.</p>
-                </div>
-                <div class="col-md-6">
-                    <h5>Projekt Neubeginn</h5>
-                    <p>Projekt Neubeginn unterstützt Flüchtlinge und Asylsuchende, die in neuen Ländern Fuß fassen. Wir bieten Kleiderspenden für Vorstellungsgespräche und den täglichen Bedarf, um den Einstieg in ein neues Leben zu erleichtern und die Integration zu unterstützen.</p>
-                </div>
-                <div class="col-md-6">
-                    <h5>Projekt Schutz</h5>
-                    <p>Dieses Projekt konzentriert sich auf die Bereitstellung von Schutzkleidung und medizinischen Hilfsmitteln für Gesundheitspersonal und Freiwillige in Krisengebieten. Wir stellen sicher, dass diejenigen, die an vorderster Front kämpfen, gut ausgerüstet und geschützt sind.</p>
+                    <h5>Projekt Renovatio Vitae</h5>
+                    <p>Wir arbeiten daran, die Lebensqualität der Menschen durch gezielte Kleiderspenden zu verbessern.</p>
                 </div>
             </div>
 
@@ -81,8 +79,8 @@
             <div class="row mt-4">
                 <div class="col-md-12">
                     <h3>Unterstützen Sie uns</h3>
-                    <p>Es gibt viele Möglichkeiten, wie Sie uns unterstützen können. Spenden Sie Kleidung oder helfen Sie uns mit einer Geldspende.</p>
-                    <p><a href="kleiderspende.html" class="btn btn-primary btn-lg my-2 btn-animated">Jetzt Spenden</a></p>
+                    <p>Es gibt viele Möglichkeiten, wie Sie uns unterstützen können. Werden Sie Mitglied, spenden Sie Kleidung oder helfen Sie uns mit einer Geldspende.</p>
+                    <p><a href="mitgliedschaft.html" class="btn btn-primary">Mitglied werden</a></p>
                 </div>
             </div>
         </div>
@@ -122,6 +120,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="kleiderspende.js"></script>
 </body>
 </html>
